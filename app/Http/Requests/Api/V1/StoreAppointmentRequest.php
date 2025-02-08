@@ -26,5 +26,5 @@ class StoreAppointmentRequest extends FormRequest
             'client_name'  => 'required|string|max:255',
             'client_email' => 'required|email',
         ];
-    }
+    } 
 }
