@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens; 
+
 
 class TimeSlot extends Model
 {
+    use HasApiTokens;
+
     protected $fillable = [
         'psychologist_id',
         'start_time',

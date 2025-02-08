@@ -13,6 +13,8 @@ class TimeSlotController extends Controller
 {
     public function index($psychologistId)
     {
+        // abort_if(! auth()->user()->tokenCan('slots-list'), 403); 
+
         $timeSlots = TimeSlot::where('psychologist_id', $psychologistId)
             ->where('is_booked', false)
             ->get();
